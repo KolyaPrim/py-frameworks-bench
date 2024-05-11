@@ -20,12 +20,6 @@ jobs:
       - name: Create docker network
         run: docker network create data
 
-      - name: Benchmark AIOHTTP
-        uses: ./.github/actions/benchmark
-        with:
-          name: aiohttp
-          network: data
-
       - name: Benchmark Blacksheep v1
         uses: ./.github/actions/benchmark
         with:
@@ -36,30 +30,6 @@ jobs:
         uses: ./.github/actions/benchmark
         with:
           name: blacksheep2
-          network: data
-
-      - name: Benchmark Baize
-        uses: ./.github/actions/benchmark
-        with:
-          name: baize
-          network: data
-
-      - name: Benchmark Muffin
-        uses: ./.github/actions/benchmark
-        with:
-          name: muffin
-          network: data
-
-      - name: Benchmark Quart
-        uses: ./.github/actions/benchmark
-        with:
-          name: quart
-          network: data
-
-      - name: Benchmark Sanic
-        uses: ./.github/actions/benchmark
-        with:
-          name: sanic
           network: data
 
       - name: Benchmark Starlette
@@ -74,28 +44,10 @@ jobs:
           name: django
           network: data
 
-      - name: Benchmark Falcon
-        uses: ./.github/actions/benchmark
-        with:
-          name: falcon
-          network: data
-
       - name: Benchmark FastApi
         uses: ./.github/actions/benchmark
         with:
           name: fastapi
-          network: data
-
-      - name: Benchmark Emmett
-        uses: ./.github/actions/benchmark
-        with:
-          name: emmett
-          network: data
-
-      - name: Benchmark Tornado
-        uses: ./.github/actions/benchmark
-        with:
-          name: tornado
           network: data
 
       - name: Results
