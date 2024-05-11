@@ -26,10 +26,16 @@ jobs:
           name: aiohttp
           network: data
 
-      - name: Benchmark Blacksheep
+      - name: Benchmark Blacksheep v1
         uses: ./.github/actions/benchmark
         with:
           name: blacksheep
+          network: data
+
+      - name: Benchmark Blacksheep v2
+        uses: ./.github/actions/benchmark
+        with:
+          name: blacksheep2
           network: data
 
       - name: Benchmark Baize
