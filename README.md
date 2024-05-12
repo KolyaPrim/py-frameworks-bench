@@ -29,7 +29,7 @@ queries), routing, responses.
 
 
 
-<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep%22%2C%22blacksheep2%22%2C%22starlette%22%2C%22fastapi%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B557670%2C544875%2C388110%2C281325%2C51795%5D%7D%5D%7D%7D' />
+<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep2%22%2C%22blacksheep%22%2C%22starlette%22%2C%22fastapi%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B550485%2C548355%2C384270%2C283425%2C51015%5D%7D%5D%7D%7D' />
 
 ## The Methodic
 
@@ -76,11 +76,11 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 20634 | 3.09 | 3.12 | 3.10
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 19596 | 3.12 | 3.32 | 3.35
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 15076 | 4.13 | 4.18 | 4.25
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 10277 | 6.18 | 6.22 | 6.50
-| [django](https://pypi.org/project/django/) `4.0.3` | 1304 | 45.96 | 47.00 | 49.66
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 20534 | 3.09 | 3.12 | 3.48
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 20352 | 3.14 | 3.16 | 3.14
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 14888 | 4.16 | 4.21 | 4.30
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 10377 | 6.09 | 6.12 | 6.43
+| [django](https://pypi.org/project/django/) `4.0.3` | 1285 | 46.81 | 47.98 | 50.37
 
 
 </details>
@@ -93,11 +93,11 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 11462 | 5.58 | 5.62 | 5.58
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 11235 | 5.66 | 5.70 | 5.70
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 8850 | 7.20 | 7.24 | 7.23
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 6669 | 9.57 | 9.62 | 9.60
-| [django](https://pypi.org/project/django/) `4.0.3` | 1198 | 50.93 | 52.21 | 53.37
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 11078 | 5.75 | 5.79 | 5.78
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 10967 | 5.81 | 5.85 | 5.84
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 8795 | 7.26 | 7.30 | 7.28
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 6712 | 9.48 | 9.52 | 9.53
+| [django](https://pypi.org/project/django/) `4.0.3` | 1187 | 51.49 | 52.69 | 53.86
 
 </details>
 
@@ -109,11 +109,11 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 5309 | 11.97 | 12.05 | 12.06
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 5267 | 12.10 | 12.17 | 12.15
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 1948 | 32.57 | 32.72 | 32.82
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 1809 | 35.20 | 35.33 | 35.37
-| [django](https://pypi.org/project/django/) `4.0.3` | 951 | 63.91 | 65.47 | 67.17
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 5238 | 12.02 | 12.11 | 12.22
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 5087 | 12.48 | 12.57 | 12.58
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 1935 | 32.88 | 33.02 | 33.06
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 1806 | 35.18 | 35.37 | 35.42
+| [django](https://pypi.org/project/django/) `4.0.3` | 929 | 64.16 | 67.29 | 68.64
 
 
 </details>
@@ -126,11 +126,11 @@ Sorted by completed requests
 
 | Framework | Requests completed | Avg Latency 50% (ms) | Avg Latency 75% (ms) | Avg Latency (ms) |
 | --------- | -----------------: | -------------------: | -------------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 557670 | 6.91 | 6.96 | 6.95
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 544875 | 6.93 | 7.04 | 7.03
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 388110 | 14.63 | 14.71 | 14.77
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 281325 | 16.98 | 17.06 | 17.16
-| [django](https://pypi.org/project/django/) `4.0.3` | 51795 | 53.6 | 54.89 | 56.73
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 550485 | 7.11 | 7.16 | 7.28
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 548355 | 6.99 | 7.04 | 7.07
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 384270 | 14.77 | 14.84 | 14.88
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 283425 | 16.92 | 17.0 | 17.13
+| [django](https://pypi.org/project/django/) `4.0.3` | 51015 | 54.15 | 55.99 | 57.62
 
 </details>
 
