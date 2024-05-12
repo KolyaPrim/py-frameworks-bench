@@ -1,13 +1,17 @@
 name: benchmarks
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: [tests]
+    branches: [master]
+    types: [completed]
 
 jobs:
 
   benchmark:
     name: Run the benchmark
     runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
 
       - name: Checkout
