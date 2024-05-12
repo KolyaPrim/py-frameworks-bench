@@ -23,7 +23,7 @@ async def upload(request):
     if 'file' not in formdata:
         return HttpResponseBadRequest('ERROR')
 
-    with open(f"/tmp/{uuid4().hex}", 'wb') as target:
+    with open(f"./{uuid4().hex}", 'wb') as target:
         target.write(formdata['file'].read())
 
     return HttpResponse(target.name, content_type="text/plain")

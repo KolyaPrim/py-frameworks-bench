@@ -32,7 +32,7 @@ async def upload(request):
     if 'file' not in formdata:
         return Response('ERROR', status_code=400)
 
-    with open(f"/tmp/{uuid4().hex}", 'wb') as target:
+    with open(f"./{uuid4().hex}", 'wb') as target:
         target.write(await formdata['file'].read())
 
     return PlainTextResponse(target.name)
