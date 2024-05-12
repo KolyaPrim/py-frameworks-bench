@@ -22,7 +22,7 @@ jobs:
       run: |
         pip install "cython<3.0.0" setuptools
         find frameworks | grep requirements.txt | xargs -n 1 pip install -r
-        pip install pytest pytest-aio
+        pip install pytest pytest-aio asgi-tools
 
     - name: Test with pytest
       run: |
