@@ -14,12 +14,13 @@ jobs:
     - name: Checkout changes
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
-        pip install "cython<3.0.0" && pip install --no-build-isolation pyyaml==6.0
+        pip install "cython<3.0.0" setuptools && pip install --no-build-isolation pyyaml==6.0
         find frameworks | grep requirements.txt | xargs -n 1 pip install -r
         pip install pytest pytest-aio
 
