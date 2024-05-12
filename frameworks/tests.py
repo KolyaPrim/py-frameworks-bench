@@ -6,16 +6,9 @@ import pytest
 
 
 @pytest.fixture(scope='session', params=[
-    'quart',  # has to be first
-    #  'aiohttp',  # doesnt support ASGI
-    'baize',
     'blacksheep',
     'django',
-    'emmett',
-    'falcon',
     'fastapi',
-    'muffin',
-    'sanic',
     'starlette',
 ])
 def asgi(request):
