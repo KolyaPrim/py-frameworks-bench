@@ -1,10 +1,7 @@
 name: benchmarks
 
 on:
-  workflow_run:
-    workflows: [tests]
-    branches: [master]
-    types: [completed]
+  workflow_dispatch:
 
 jobs:
 
