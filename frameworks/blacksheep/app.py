@@ -36,8 +36,8 @@ async def view_upload(request):
     if formdata is None or 'file' not in formdata:
         return bad_request()
 
-    with open(f"./{uuid4().hex}", 'w') as target:
-        target.write(formdata['file'])
+    with open(f"./{uuid4().hex}", 'w', encoding='utf-8') as target:
+        target.write(formdata['file'][0].data.decode())
 
     return text(target.name)
 
