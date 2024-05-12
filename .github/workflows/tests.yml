@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install "cython<3.0.0" setuptools && pip install --no-build-isolation pyyaml==6.0.1
+        pip install "cython<3.0.0" setuptools &&  pip install --no-build-isolation pyyaml==5.4.1
         find frameworks | grep requirements.txt | xargs -n 1 pip install -r
         pip install pytest pytest-aio
 
