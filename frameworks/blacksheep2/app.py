@@ -1,7 +1,7 @@
 import time
 from uuid import uuid4
 
-from blacksheep import Application, get, post, put
+from blacksheep import Application, get, post, put, FromFiles
 from blacksheep.server.responses import html, json, bad_request, text, unauthorized
 
 
@@ -30,14 +30,14 @@ async def view_html(request):
 
 
 @post('/upload')
-async def view_upload(request):
+async def view_upload(files: FromFiles):
     """Load multipart data and store it as a file."""
-    formdata = await request.form()
-    if formdata is None or 'file' not in formdata:
+    formdata = files.value
+    if formdata is None:
         return bad_request()
 
     with open(f"./{uuid4().hex}", 'w', encoding='utf-8') as target:
-        target.write(formdata['file'][0].data.decode())
+        target.write(formdata[0].data.decode())
 
     return text(target.name)
 
