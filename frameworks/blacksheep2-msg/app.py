@@ -6,13 +6,8 @@ from uuid import uuid4
 import orjson
 from blacksheep import Application, get, post, put, FromFiles, Request
 from blacksheep.server.responses import html, json, bad_request, text, unauthorized
-from blacksheep.server.bindings import Binder, FromJSON, BoundValue
-import msgspec.msgpack
 from blacksheep import Response, Content
-from msgspec import Struct
-
-
-encoder = msgspec.msgpack.Encoder()
+from blacksheep.settings.json import json_settings
 
 
 app = Application()
@@ -50,9 +45,6 @@ async def view_upload(files: FromFiles):
         target.write(formdata[0].data.decode())
 
     return text(target.name)
-
-
-from blacksheep.settings.json import json_settings
 
 
 
