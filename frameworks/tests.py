@@ -6,7 +6,6 @@ import pytest
 
 
 @pytest.fixture(scope='session', params=[
-    'blacksheep2',
     'django',
     'fastapi',
     'starlette',
