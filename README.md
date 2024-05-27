@@ -2,7 +2,7 @@
 
 https://klen.github.io/py-frameworks-bench/
 ----------
-#### Updated: 2024-05-12
+#### Updated: 2024-05-27
 
 [![benchmarks](https://github.com/klen/py-frameworks-bench/actions/workflows/benchmarks.yml/badge.svg)](https://github.com/klen/py-frameworks-bench/actions/workflows/benchmarks.yml)
 [![tests](https://github.com/klen/py-frameworks-bench/actions/workflows/tests.yml/badge.svg)](https://github.com/klen/py-frameworks-bench/actions/workflows/tests.yml)
@@ -21,7 +21,7 @@ queries), routing, responses.
 ## Table of contents
 
 * [The Methodic](#the-methodic)
-* [The Results](#the-results-2024-05-12)
+* [The Results](#the-results-2024-05-27)
     * [Accept a request and return HTML response with a custom dynamic header](#html)
     * [Parse path params, query string, JSON body and return a json response](#api)
     * [Parse uploaded file, store it on disk and return a text response](#upload)
@@ -29,7 +29,7 @@ queries), routing, responses.
 
 
 
-<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep2%22%2C%22blacksheep%22%2C%22starlette%22%2C%22fastapi%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B550485%2C548355%2C384270%2C283425%2C51015%5D%7D%5D%7D%7D' />
+<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep2-msg%22%2C%22blacksheep2%22%2C%22blacksheep%22%2C%22starlette%22%2C%22fastapi%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B589155%2C561735%2C556590%2C391260%2C279990%2C50295%5D%7D%5D%7D%7D' />
 
 ## The Methodic
 
@@ -66,7 +66,7 @@ The benchmark has a three kind of tests:
    simulates multipart formdata processing and work with files.
 
 
-## The Results (2024-05-12)
+## The Results (2024-05-27)
 
 <h3 id="html"> Accept a request and return HTML response with a custom dynamic header</h3>
 <details open>
@@ -76,11 +76,12 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 20534 | 3.09 | 3.12 | 3.48
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 20352 | 3.14 | 3.16 | 3.14
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 14888 | 4.16 | 4.21 | 4.30
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 10377 | 6.09 | 6.12 | 6.43
-| [django](https://pypi.org/project/django/) `4.0.3` | 1285 | 46.81 | 47.98 | 50.37
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 21228 | 3.00 | 3.02 | 3.14
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 20660 | 3.09 | 3.11 | 3.09
+| [blacksheep2-msg](https://pypi.org/project/blacksheep2-msg/) `` | 20491 | 3.08 | 3.11 | 3.35
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 15339 | 4.11 | 4.14 | 4.18
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 10224 | 6.20 | 6.24 | 6.59
+| [django](https://pypi.org/project/django/) `4.0.3` | 1265 | 47.69 | 49.21 | 51.01
 
 
 </details>
@@ -93,11 +94,12 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 11078 | 5.75 | 5.79 | 5.78
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 10967 | 5.81 | 5.85 | 5.84
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 8795 | 7.26 | 7.30 | 7.28
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 6712 | 9.48 | 9.52 | 9.53
-| [django](https://pypi.org/project/django/) `4.0.3` | 1187 | 51.49 | 52.69 | 53.86
+| [blacksheep2-msg](https://pypi.org/project/blacksheep2-msg/) `` | 13704 | 4.65 | 4.70 | 4.67
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 11212 | 5.69 | 5.73 | 5.71
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 11164 | 5.72 | 5.76 | 5.73
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 8805 | 7.25 | 7.29 | 7.27
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 6657 | 9.57 | 9.67 | 9.61
+| [django](https://pypi.org/project/django/) `4.0.3` | 1164 | 52.17 | 53.52 | 54.89
 
 </details>
 
@@ -109,11 +111,12 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 5238 | 12.02 | 12.11 | 12.22
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 5087 | 12.48 | 12.57 | 12.58
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 1935 | 32.88 | 33.02 | 33.06
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 1806 | 35.18 | 35.37 | 35.42
-| [django](https://pypi.org/project/django/) `4.0.3` | 929 | 64.16 | 67.29 | 68.64
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 5234 | 12.13 | 12.25 | 12.23
+| [blacksheep2-msg](https://pypi.org/project/blacksheep2-msg/) `` | 5082 | 12.46 | 12.56 | 12.59
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 5057 | 12.58 | 12.69 | 12.66
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 1940 | 32.84 | 33.08 | 32.96
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 1785 | 35.62 | 35.82 | 35.80
+| [django](https://pypi.org/project/django/) `4.0.3` | 924 | 65.14 | 67.91 | 69.11
 
 
 </details>
@@ -126,11 +129,12 @@ Sorted by completed requests
 
 | Framework | Requests completed | Avg Latency 50% (ms) | Avg Latency 75% (ms) | Avg Latency (ms) |
 | --------- | -----------------: | -------------------: | -------------------: | ---------------: |
-| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 550485 | 7.11 | 7.16 | 7.28
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 548355 | 6.99 | 7.04 | 7.07
-| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 384270 | 14.77 | 14.84 | 14.88
-| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 283425 | 16.92 | 17.0 | 17.13
-| [django](https://pypi.org/project/django/) `4.0.3` | 51015 | 54.15 | 55.99 | 57.62
+| [blacksheep2-msg](https://pypi.org/project/blacksheep2-msg/) `` | 589155 | 6.73 | 6.79 | 6.87
+| [blacksheep2](https://pypi.org/project/blacksheep2/) `` | 561735 | 7.1 | 7.16 | 7.18
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.18` | 556590 | 6.97 | 7.03 | 7.01
+| [starlette](https://pypi.org/project/starlette/) `0.17.1` | 391260 | 14.73 | 14.84 | 14.8
+| [fastapi](https://pypi.org/project/fastapi/) `0.75.0` | 279990 | 17.13 | 17.24 | 17.33
+| [django](https://pypi.org/project/django/) `4.0.3` | 50295 | 55.0 | 56.88 | 58.34
 
 </details>
 
