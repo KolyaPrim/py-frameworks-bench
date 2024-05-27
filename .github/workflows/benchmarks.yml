@@ -32,6 +32,12 @@ jobs:
           name: blacksheep2
           network: data
 
+      - name: Benchmark Blacksheep v2 orjson
+        uses: ./.github/actions/benchmark
+        with:
+          name: blacksheep2-msg
+          network: data
+
       - name: Benchmark Starlette
         uses: ./.github/actions/benchmark
         with:
