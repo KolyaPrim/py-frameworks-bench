@@ -13,11 +13,6 @@ inputs:
 runs:
   using: composite
   steps:
-
-    - name: Update pip
-      run: /usr/local/bin/python -m pip install --upgrade pip
-      shell: bash
-
     - name: Build
       run: docker build -f ./frameworks/Dockerfile -t app ./frameworks/${{ inputs.name }}
       shell: bash
