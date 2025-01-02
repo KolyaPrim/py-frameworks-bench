@@ -9,6 +9,7 @@ endif
 
 $(VIRTUAL_ENV): frameworks/*/requirements.txt
 	@[ -d $(VIRTUAL_ENV) ] || python3 -m venv $(VIRTUAL_ENV)
+	/usr/local/bin/python -m pip install --upgrade pip
 	find frameworks | grep requirements | xargs -n1 $(VIRTUAL_ENV)/bin/pip install -r
 	touch $(VIRTUAL_ENV)
 
