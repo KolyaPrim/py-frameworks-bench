@@ -1,6 +1,5 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-RUN /usr/local/bin/python -m pip install --upgrade pip
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends build-essential
@@ -15,8 +14,8 @@ RUN /usr/local/bin/pip install --no-cache-dir \
     uvicorn[standard]
 
 ONBUILD COPY requirements.txt /app/requirements.txt
-ONBUILD RUN /usr/local/bin/python -m pip install --upgrade pip
-ONBUILD RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
+ONBUILD RUN /usr/local/bin/python -m pip install --upgrade pip && \
+    /usr/local/bin/pip install --no-cache-dir -r requirements.txt
 ONBUILD COPY . /app
 
 EXPOSE 8080
