@@ -20,6 +20,12 @@ jobs:
       - name: Create docker network
         run: docker network create data
 
+      - name: Benchmark Django
+        uses: ./.github/actions/benchmark
+        with:
+          name: django
+          network: data
+
       - name: Benchmark Blacksheep v1
         uses: ./.github/actions/benchmark
         with:
@@ -42,12 +48,6 @@ jobs:
         uses: ./.github/actions/benchmark
         with:
           name: starlette
-          network: data
-
-      - name: Benchmark Django
-        uses: ./.github/actions/benchmark
-        with:
-          name: django
           network: data
 
       - name: Benchmark FastApi

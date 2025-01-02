@@ -3,7 +3,9 @@ FROM python:3.9-slim
 RUN apt-get update && \
     apt-get -y install --no-install-recommends build-essential
 
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
+ENV PIP_DISABLE_PIP_VERSION_CHECK=0
 
 RUN /usr/local/bin/pip install --no-cache-dir \
     wheel \
@@ -12,8 +14,6 @@ RUN /usr/local/bin/pip install --no-cache-dir \
     ujson \
     uvicorn[standard]
 
-
-ONBUILD RUN /usr/local/bin/python -m pip install --upgrade pip
 ONBUILD COPY requirements.txt /app/requirements.txt
 ONBUILD RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
 ONBUILD COPY . /app
