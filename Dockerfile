@@ -12,6 +12,8 @@ RUN /usr/local/bin/pip install --no-cache-dir \
     ujson \
     uvicorn[standard]
 
+
+ONBUILD RUN /usr/local/bin/python -m pip install --upgrade pip
 ONBUILD COPY requirements.txt /app/requirements.txt
 ONBUILD RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
 ONBUILD COPY . /app
