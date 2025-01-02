@@ -1,5 +1,7 @@
 FROM python:3.9-slim
 
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
 RUN apt-get update && \
     apt-get -y install --no-install-recommends build-essential
 
